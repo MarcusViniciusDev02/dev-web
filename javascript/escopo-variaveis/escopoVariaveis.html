@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de variáveis</title>
+</head>
+<body>
+    <script>
+        var serie = "Friends";
+
+        if(true){
+            var serie2 = "Game of thrones";
+            document.write(serie);
+        }
+        document.write("<br />");
+
+        function x (){
+            document.write(serie);
+        }
+        x();
+
+        
+    </script>
+</body>
+</html>
