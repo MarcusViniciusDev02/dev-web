@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funções para manipular Strings</title>
 </head>
+
 <body>
-    
+    <script>
+        // length - Retorna quantidade de caracteres de uma string
+        var nome = " -Jorge Sant Ana-";
+        document.write(nome.length)
+        document.write("<hr />")
+        // chatAt() - Busca o caracter no índice selecionado.
+        document.write(nome.charAt(12))
+        document.write("<hr />")
+        // Identifica o índice da primeira ocorrência do caracter.
+        document.write(nome.indexOf("e"))
+        document.write("<hr />")
+        // Replace muda uma cadeia de caracteres por outra. 
+        document.write(nome.replace('Jorge', "Vinicius"))
+        document.write("<hr />")
+        // Substring - Corta um trecho de caracteres selecionados. Pondo o índice inicial e em qual eu quero terminar.
+        document.write(nome.substring(6, 10))
+        document.write("<hr />")
+        //trim - remove espaços da esquerda e direita.
+        document.write(nome.trim())
+    </script>
 </body>
+
 </html>

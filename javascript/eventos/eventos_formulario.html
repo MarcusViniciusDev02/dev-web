@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos formulário</title>
+</head>
+
+<body>
+    <input onfocus="acao()" type="text" placeholder="onfocus">
+    <input onblur="acao2()" type="text" placeholder="onblur">
+    
+    <select onchange="acao3()" name="" id="">
+        <option value="1">1</option>
+        <option value="2">2</option>
+    </select>
+    
+
+    <script>
+        function acao(){
+            alert("elemento focado")
+        }
+        function acao2(){
+            alert("elemento perdeu foco")
+        }
+        function acao3(){
+            alert("elemento modificado")
+        }
+        
+    </script>
+
+</body>
+
+</html>

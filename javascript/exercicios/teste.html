@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+
+<body>
+    <script>
+        var num1 = prompt("Selecione o primeiro número")
+        var num2 = prompt("Selecione o segundo número")
+        var operacao = prompt("Selecione a operação")
+
+        num1 = Number(num1)
+        num2 = Number(num2)
+
+
+        function calcular(somar, subtrair, multiplicar, dividir) {
+            switch (operacao) {
+                case "+":
+                    somar(num1, num2)
+                    break;
+                case "-":
+                    subtrair(num1, num2)
+                    break;
+                case "*":
+                    multiplicar(num1, num2)
+                    break;
+                case "/":
+                    dividir(num1, num2)
+                    break;
+                default:
+                    document.write("Erro")
+            }
+        }
+
+        var somar = function (num1, num2) {
+            var soma = num1 + num2;
+            document.write(soma);
+        }
+        var subtrair = function (num1, num2) {
+            var subtrair = num1 - num2;
+            document.write(subtrair);
+        }
+        var multiplicar = function (num1, num2) {
+            var multiplicar = num1 * num2;
+            document.write(multiplicar);
+        }
+        var dividir = function (num1, num2) {
+            var dividir = parseFloat(num1 / num2);
+            document.write(dividir);
+        }
+
+        calcular(somar, subtrair, multiplicar, dividir)
+
+    </script>
+</body>
+
+</html>

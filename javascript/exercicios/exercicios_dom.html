@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio - DOM</title>
+
+    <style>
+        .backVerde {
+            background-color: green;
+        }
+
+        .backVermelho {
+            background-color: brown;
+        }
+
+        .backAmarelo {
+            background-color: yellow;
+        }
+    </style>
+
+    <script>
+
+        function mudarBackground(cor) {
+            document.getElementById('texto').className = 'backAmarelo'
+        }
+
+        function mudarBackgroundDependendoDosCaracteres() {
+            var caracter = document.getElementById('texto').value;
+            var quantidadeCaracteres = caracter.length;
+
+            if (quantidadeCaracteres < 3) {
+                document.getElementById('texto').className = 'backVermelho';
+            }else{
+                document.getElementById('texto').className = 'backVerde';
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="texto" onfocus="mudarBackground()" onblur="mudarBackgroundDependendoDosCaracteres()">
+</body>
+
+</html>
