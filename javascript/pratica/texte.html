@@ -205,26 +205,21 @@
   </body>
 
   <script>
-    function calcular(tipo, valor) {
-      if (tipo === "acao") {
-        if (
-          valor === "+" ||
-          valor === "-" ||
-          valor === "*" ||
-          valor === "/" ||
-          valor === "."
-        ) {
-          document.getElementById("resultado").value += valor;
+    function calcular (tipo, valor){
+      if(tipo === 'acao'){
+        if(valor === '+' || valor === '-' || valor === '*' || valor === '/' || valor === '.' ){
+          document.getElementById('resultado').value += valor;
         }
-        if (valor === "c") {
-          document.getElementById("resultado").value = " ";
+        if(valor === 'c'){
+          document.getElementById('resultado').value = '';
         }
-        if (valor === "=") {
-          var calculo = eval(document.getElementById("resultado").value);
-          document.getElementById("resultado").value = calculo;
+        if(valor === '='){
+          var calculo = eval(document.getElementById('resultado').value)
+          document.getElementById('resultado').value = calculo
         }
-      } else if (tipo === "valor") {
-        document.getElementById("resultado").value += valor;
+      }else if(tipo === 'valor'){
+        document.getElementById('resultado').value += valor;
+
       }
     }
   </script>

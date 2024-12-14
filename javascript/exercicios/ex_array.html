@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio do Array</title>
+  </head>
+  <body>
+    <input type="text" id="entradaNome" placeholder="Digite um nome" required />
+    <button onclick="adicionarNoArray()">Adicionar</button>
+    <button onclick="organizarEmTela()">Organizar</button>
+
+    <script>
+      var arrayNomes = [];
+      function adicionarNoArray() {
+        var nome = document.getElementById("entradaNome").value.trim();
+        if (nome == "") {
+          alert("Informe um valor válido!");
+          arrayNomes.pop();
+        }
+        if (arrayNomes.includes(nome)) {
+          alert("Nome repetido");
+        } else {
+          arrayNomes.push(nome);
+        }
+
+        console.log(arrayNomes);
+        var nome = (document.getElementById("entradaNome").value = "");
+        console.log(arrayNomes.length);
+      }
+
+      function organizarEmTela(){
+        console.log(arrayNomes.sort())
+      }
+    </script>
+  </body>
+</html>
